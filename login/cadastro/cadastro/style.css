@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,body,a,a:hover,input,input:hover,button,label {
+  cursor: url(http://media.tumblr.com/tumblr_lw61mazJ5K1qgnbhu.png), auto;
+}
+
+html,body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: url(https://static.vecteezy.com/system/resources/thumbnails/008/092/846/small/the-sky-is-dyed-purple-free-photo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+@keyframes floatMagic {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+#cadastroBox {
+  display: flex;
+  width: 750px;
+  height: 400px;
+  border: 2px solid rgba(90, 87, 87, 0.192);
+  border-radius: 20px;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  animation: floatMagic 3s infinite;
+}
+
+#lateralDireita {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55%;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgba(158, 87, 240, 0.473);
+  backdrop-filter: blur(30px);
+  border-radius: 0 30% 20% 0;
+  transition: border-radius 0.3s;
+}
+
+#bemVindo {
+  font-size: 32px;
+  font-family: 'MedievalSharp', cursive !important;
+  color: #f8bbd0;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #e0c423;
+  transition: transform 0.3s;
+}
+
+#bemVindo:hover {
+  transform: translateY(-3px);
+}
+
+#areaCadastro {
+  width: 45%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+#subtitulo {
+  animation: glowTitulo 2s infinite alternate;
+  transition: transform 0.3s;
+}
+
+#subtitulo:hover{
+transform: translateY(-5px);
+}
+
+#linhaDecorativa {
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(to right, #ab47bc, #7e57c2);
+  border-radius: 5px; }
+  
+#titulo {
+  color: #fff;
+  font-size: 40px;
+  font-family: 'MedievalSharp', cursive !important;
+  animation: glowTitulo 2s infinite alternate;
+  transition: transform 0.3s;
+}
+
+#titulo:hover {
+  transform: translateY(-5px);
+}
+
+label {
+  color: #ffffffd0;
+  font-weight: 500;
+}
+
+@keyframes glowTitulo {
+  from {
+    text-shadow: 0 0 5px #ab47bc;
+  }
+  to {
+    text-shadow: 0 0 45px #e6ff08;
+  }
+}
+
+.inputs {
+  position: relative;
+  width: 100%;
+}
+
+#inputNome, #inputEmail,#inputSenha {
+  width: 100%;
+  padding: 10px 35px 10px 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f3e5f5;
+  transition: box-shadow 0.4s ease;
+  color: #7616cf;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #ce93d8;
+}
+
+i {
+  position: absolute;
+  top: 65%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: rgb(101, 60, 172);
+  transition: transform 0.3s;
+}
+
+i:hover {
+  transform: translateY(-5px);
+}
+
+#botaoCadastrar {
+  border: none;
+  font-size: 18px;
+  padding: 13px 50px;
+  border-radius: 10px;
+  background: linear-gradient(#ab47bc, #7e57c2);
+  color: #fff;
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-family: 'MedievalSharp', cursive !important;
+}
+
+#botaoCadastrar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #ce93d8;
+}
+
+#linkLogin {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+#linkLogin:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  #cadastroBox {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  #areaCadastro, #lateralDireita {
+    width: 100%;
+    border-radius: 0;
+    padding: 20px;
+  }
+
+  #lateralDireita {
+    border-radius: 0 0 20px 20px;
+    gap: 20px;
+  }
+
+  #bemVindo {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  #titulo {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  #linhaDecorativa {
+    width: 70%;
+  }
+
+  #botaoCadastrar {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+  }
+
+  .inputs {
+    width: 100%;
+  }
+
+  #inputNome, #inputEmail, #inputSenha {
+    padding: 10px;
+  }
+
+  i {
+    right: 12px;
+    top: 50%;
+  }
+}
+
+
+@media (max-width: 375px) {
+  #cadastroBox {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  #areaCadastro, #lateralDireita {
+    width: 100%;
+    border-radius: 0;
+    padding: 15px;
+  }
+
+  #lateralDireita {
+    border-radius: 0 0 20px 20px;
+    gap: 15px;
+  }
+
+  #bemVindo {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  #titulo {
+    font-size: 28px;
+    text-align: center;
+  }
+
+
+  #linhaDecorativa {
+    width: 80%;
+  }
+
+  #botaoCadastrar {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .inputs {
+    width: 100%;
+  }
+
+  #inputNome, #inputEmail, #inputSenha {
+    padding: 10px;
+  }
+
+  i {
+    right: 10px;
+    top: 50%;
+  }
+}

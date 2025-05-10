@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="../home/assets/artefairy.png" type="image/png">
+  <title>Artefairy</title>
+  <link rel="stylesheet" href="Style.css">
+  <script src="ButtonCard.js" defer> </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <style>
+    #mobile-menu {
+      transition: max-height 0.3s ease-out;
+      overflow: hidden;
+      max-height: 0;
+    }
+    #mobile-menu.show {
+      max-height: 500px; 
+    }
+ 
+  </style>
+</head>
+
+<body>
+   <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+      >
+        <a href="../Perfil/index.html"class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+        <img src="../home/assets/artefairy.png" width="110" height="110" alt="Logo do e-commerce Artefairy">
+    </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li>
+            <a href="../home/index2.html" class="nav-link px-2 link-secondary ">Inicio</a>
+          </li>
+         
+          <li>
+            <a href="../Catalogo/index.html" class="nav-link px-2 link-body-emphasis text-white"
+              >Cátologo</a
+            >
+          </li>
+          <li>
+            <a href="../Exposicao_de_Animes/index.html" class="nav-link px-2 link-body-emphasis text-white"
+              >Exposição</a
+            >
+          </li>
+          <li>
+            <a href="../carrinho_de_compras/PageCart/index.html" class="nav-link px-2 link-body-emphasis text-white"
+              >Meu carrinho</a
+            >
+          </li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input
+            type="search"
+            class="form-control"
+            placeholder="Pesquisar..."
+            aria-label="Search"
+          />
+        </form>
+
+        <div class="dropdown text-end">
+          <a
+            href="../Perfil/index.html"
+            class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+          </svg>
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <nav class="mobile-nav">
+      <ul class="mobile-nav-list">
+        <li><a href="#" class="mobile-nav-link">Início</a></li>
+        <li><a href="#" class="mobile-nav-link">Produtos</a></li>
+        <li><a href="#" class="mobile-nav-link">Catálogo</a></li>
+        <li><a href="#" class="mobile-nav-link">Exposição</a></li>
+        <li><a href="#" class="mobile-nav-link">Meu Carrinho</a></li>
+      </ul>
+      
+      <div class="mobile-search-container">
+        <input type="text" placeholder="Buscar itens mágicos..." class="mobile-search-input"/>
+      </div>
+    </nav>
+  </div>
+
+      <div class="products-container">
+        <h1 class="section-title">Itens de Catálogo</h1>
+        <div class="products-grid" id="produtos-container"></div> 
+      </div>
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('show');
+      });
+
+      document.querySelectorAll('#mobile-menu a').forEach(item => {
+        item.addEventListener('click', () => {
+          mobileMenu.classList.remove('show');
+        });
+      });
+    });
+
+    // Produtos para o catálogo
+    const produtos = [
+      {
+        id: 1,
+        nome: "Pokébola do Ash",
+        descricao: "A Pokébola usada para capturar o Pikachu. Um item lendário para verdadeiros mestres Pokémon.",
+        imagem: "https://static.wixstatic.com/media/256ffc_a38b7fdd4de94431a005639a73cad389~mv2.jpg/v1/fill/w_480,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/256ffc_a38b7fdd4de94431a005639a73cad389~mv2.jpg",
+        preco: 599.99,
+        categoria: "Relíquias",
+        corDestaque: "green"
+      },
+      {
+        id: 2,
+        nome: "Sabre de Luz do Luke",
+        descricao: "O sabre de luz usado por Luke Skywalker na luta contra Darth Vader. Um item essencial para qualquer Jedi.",
+        imagem: "https://sabredeluz.com.br/cdn/shop/products/sabre-de-luz-luke-skywalker.jpg?v=1672791169",
+        preco: 799.99,
+        categoria: "Artefatos",
+        corDestaque: "blue"
+      },
+      {
+        id: 3,
+        nome: "Um Anel para Todos Governar",
+        descricao: "O anel único que controla todos os outros anéis. Um item poderoso e perigoso.",
+        imagem: "https://upload.wikimedia.org/wikipedia/commons/4/45/Unico_Anello.jpg",
+        preco: 599.99,
+        categoria: "Relíquias",
+        corDestaque: "red"
+      },
+      {
+        id: 4,
+        nome: "Varinha do Harry Potter",
+        descricao: "Conhecida como a Varinha das Varinhas, é feita de azevinho, tem 28 centímetros e possui um núcleo de pena de fênix. Essa pena é da fênix de Dumbledore, Fawkes, e apenas a varinha de Voldemort também possui este núcleo.",
+        imagem: "https://cdn.awsli.com.br/600x450/2437/2437567/produto/165083582/7233cb99e1.jpg",
+        preco: 199.99,
+        categoria: "Artefatos",
+        corDestaque: "yellow"
+      },
+      {
+        id: 5,
+        nome: "Misa's Death Note",
+        descricao: "Versão alternativa do caderno que aterroriza criminosos. Apenas decorativo, eu espero.",
+        imagem: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Death_Note_Book_Misa.jpg",
+        preco: 299.99,
+        categoria: "Relíquias",
+        corDestaque: "purple"
+      },
+      {
+        id: 6,
+        nome: "Chapéu de Palha do Luffy",
+        descricao: "O lendário chapéu herdado de Shanks. Ideal para quem quer ser Rei dos Piratas.",
+        imagem: "https://down-br.img.susercontent.com/file/br-11134207-7r98s-lmeppegwolpy6a",
+        preco: 359.99,
+        categoria: "Artefatos",
+        corDestaque: "orange"
+      },
+      {
+        id: 7,
+        nome: "Kunai do Minato",
+        descricao: "Usado quando Minato lançou uma kunai com selo de teletransporte na direção de Obito, que tentou se materializar para intervir, mas Minato se teleportou para a kunai e acertou Obito com um Rasengan.",
+        imagem: "https://m.media-amazon.com/images/I/5138JPbnZTL._AC_SL1500_.jpg",
+        preco: 1099.99,
+        categoria: "Relíquias",
+        corDestaque: "black"
+      },
+      {
+        id: 8,
+        nome: "Equipamento DMT",
+        descricao: "As espadas retráteis do Equipamento de Manobra Tridimensional (DMT) de Shingeki No Kyojin são um componente essencial deste equipamento, que permite aos soldados se movimentar e lutar em um espaço 3D contra os Titãs.",
+        imagem: "https://ae01.alicdn.com/kf/Sb5d3bb8db04e457c920c5f4c710e8cf8O.jpg",
+        preco: 2799.99,
+        categoria: "Relíquias",
+        corDestaque: "gray"
+      },
+      {
+        id: 9,
+        nome: "Nichirin Giyu Tomioka",
+        descricao: "Usada por Giyu de Kimetsu no Yaiba, uma katana elegante e imponente...",
+        imagem: "https://cdn.awsli.com.br/600x450/1056/1056662/produto/173287583/64ee993ccb.jpg",
+        preco: 6999.99,
+        categoria: "Relíquias",
+        corDestaque: "gray"
+      }
+  
+    ];
+      // Cores para os produtos
+    const cores = {
+      green: { border: 'border-green', text: 'text-green', bg: 'bg-green', hover: 'hover-green' },
+      blue: { border: 'border-blue', text: 'text-blue', bg: 'bg-blue', hover: 'hover-blue' },
+      red: { border: 'border-red', text: 'text-red', bg: 'bg-red', hover: 'hover-red' },
+      yellow: { border: 'border-yellow', text: 'text-yellow', bg: 'bg-yellow', hover: 'hover-yellow' },
+      purple: { border: 'border-purple', text: 'text-purple', bg: 'bg-purple', hover: 'hover-purple' },
+      orange: { border: 'border-orange', text: 'text-orange', bg: 'bg-orange', hover: 'hover-orange' },
+      black: { border: 'border-black', text: 'text-black', bg: 'bg-black', hover: 'hover-black' },
+      gray: { border: 'border-gray', text: 'text-gray', bg: 'bg-gray', hover: 'hover-gray' }
+    };
+    // Função para renderizar os produtos
+    function renderizarProdutos(lista) {
+      const container = document.getElementById('produtos-container');
+      container.innerHTML = '';
+      
+      lista.forEach(produto => {
+        const cor = cores[produto.corDestaque] || cores.green;
+        const cardHTML = `
+          <div class="product-card ${cor.border}">
+            <img src="${produto.imagem}" alt="${produto.nome}"
+                 class="product-image"/>
+            <h2 class="product-title ${cor.text}">${produto.nome}</h2>
+            <p class="product-description">${produto.descricao}</p>
+            <p class="product-price ${cor.text}">R$ ${produto.preco.toFixed(2)}</p>
+            <button class="product-button ${cor.bg} ${cor.hover}">
+              Adquirir
+            </button>
+          </div>`;
+        container.innerHTML += cardHTML;
+      });
+    }
+ // Função para filtrar produtos por categoria
+    function filtrarPorCategoria(categoria) {
+      const filtrados = categoria === 'todos'
+        ? produtos
+        : produtos.filter(p => p.categoria === categoria);
+      renderizarProdutos(filtrados);
+    }
+// Função para carregar produtos
+    function carregarProdutos() {
+      try {
+        renderizarProdutos(produtos);
+      } catch (err) {
+        console.error('Erro ao carregar produtos:', err);
+        document.getElementById('produtos-container').innerHTML = `
+          <div class="error-message">
+            Erro ao carregar os produtos. Recarregue a página.
+          </div>`;
+      }
+    }
+    // Adiciona evento de clique para os botões de categoria
+    window.addEventListener('DOMContentLoaded', carregarProdutos);
+  </script>
+
+  <footer>
+    <div class="rodape">
+      <p>Contato:</p>
+      <p><a href="mailto:contato@artefairy.com" class="linkcontato" target="_blank">contato@artefairy.com</a></p> 
+      <p><a href="https://wa.me/+5511999999999?text=Ol%C3%A1%2C%20tudo%20bem%3F" class="linkcontato" target="_blank">+55 (11) 999999999 </a></p>
+      <p><a href="https://instagram.com/artefairyofc" class="linkcontato" target="_blank">Instagram</a></p>
+  <hr>
+      <p id="creditos">&copy; 2025 Artefairy - Todos os direitos reservados</p>
+    </div>
+    <script src="./script2.js"></script> 
+  </footer>
+
+</body>
+</html>

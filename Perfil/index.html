@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Conta</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="Ilustração_Sem_Título.png" type="image/png">
+</head>
+
+<body>
+  <main class="principal">
+    <div class="info">
+      <header class="perfil-header">
+        <div class="perfil-esquerda">
+          <div class="perfil-info">
+            <img src="https://i.pinimg.com/736x/7d/7a/6e/7d7a6e2398796e68a8d6474659ddc1cd.jpg" alt="Avatar"
+              class="avatar" />
+            <span class="nome"></span>
+          </div>
+          <a class="link-home" href="../home/index2.html">← Ir para a Home</a>
+        </div>
+        <div class="header-right">
+          <nav class="nav-menu">
+            <a href="#avatar">Avatar</a>
+            <a href="#informacoes">Minhas Informações</a>
+            <a href="#historico">Histórico de Compras</a>
+          </nav>
+          <button class="config-btn" id="configButton" aria-label="Configurações">
+            <i class="fas fa-cog"></i>
+          </button>
+          <div id="configMenu">
+            <ul>
+              <li id="deletar">Deletar Conta</li>
+              <li id="alterar">Alterar Dados</li>
+              <li id="sair">Sair da Conta</li>
+            </ul>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div class="perfil-grid">
+      <section id="avatar" class="info">
+        <h2>Meu Avatar</h2>
+        <div class="avatar-container">
+          <img src="https://i.pinimg.com/736x/7d/7a/6e/7d7a6e2398796e68a8d6474659ddc1cd.jpg" class="img-avatar"
+            alt="Avatar" />
+          <div class="detalhes"></div>
+        </div>
+      </section>
+
+      <div id="informacoes" class="info">
+        <h2>Minhas Informações</h2>
+        <p><strong>Endereço de Entrega:</strong> Rua Brigadeiro Godinho dos Santos, 325</p>
+        <p><strong>Forma de Pagamento:</strong> MasterCard - Final 0895</p>
+        <p><strong>Nacionalidade:</strong> Brasil</p>
+        <p><strong>Artefato Predileto:</strong> Pokebola Danificada</p>
+        <p><strong>Sobre:</strong> Demonstra grande interesse por itens mágicos e de proteção, investindo valores
+          consideráveis em artefatos poderosos ao longo do tempo.</p>
+      </div>
+    </div>
+
+    <div class="perfil-grid">
+      <section id="historico" class="info">
+        <h2>Histórico de Compras</h2>
+        <ul>
+          <li>Varinha Mágica - R$1.350,00 / 03-02-2025</li>
+          <li>Poção de Cura - R$585,90 / 18-12-2024</li>
+          <li>Capa da Invisibilidade - R$2.000,00 / 25-09-2024</li>
+          <li>Escudo do Zodíaco - R$8.000,00 / 06-02-2024</li>
+        </ul>
+      </section>
+
+      <section class="info">
+        <h2>Convide um Amigo</h2>
+        <div class="convite">
+          <input type="text" id="invite-link" value="https://artefairy.com/convite158975" readonly />
+          <button onclick="copiarLink()">Copiar Link</button>
+        </div>
+      </section>
+
+      <section class="info">
+        <h2>Suporte ao Cliente</h2>
+        <form class="suporte-form">
+          <div class="forms">
+            <label>Mensagem:</label>
+            <textarea placeholder="Descreva seu problema ou dúvida..."></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

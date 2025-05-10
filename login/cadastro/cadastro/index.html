@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> <!-- link para icones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"> <!-- Coloquei alerta personalizado -->
+    <link rel="shortcut icon" href="../../../home/assets/artefairy.png" type="image/x-icon" alt="icone da logo da artefairy" />
+    <title>Cadastro - Artefairy</title>
+</head>
+
+<body>
+    <main>
+        <form id="cadastroBox">
+            <section id="lateralDireita">
+                <h2 id="bemVindo">Bem-vindo à Artefairy!</h2>
+                <p id="subtitulo">Cadastre-se para acessar itens encantados! 🎇</p>
+                <div id="linhaDecorativa"></div>
+            </section>
+
+            <section id="areaCadastro">
+
+                <h1 id="titulo">Cadastro</h1>
+
+                <div class="inputs">
+                    <label for="inputNome">Nome</label>
+                    <input type="text" name="inputNome" id="inputNome" />
+                    <i class="fa-solid fa-hat-wizard"></i>
+                </div>
+                <div class="inputs">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" name="inputEmail" id="inputEmail" />
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="inputs">
+                    <label for="inputSenha">Senha</label>
+                    <input type="password" name="inputSenha" id="inputSenha" />
+                    <i class="fa-solid fa-wand-sparkles"></i>
+                </div>
+
+                <div>
+                    <button type="submit" id="botaoCadastrar">
+                        Cadastrar
+                    </button>
+                </div>
+
+                <div>
+                    <a href="../login/index.html" id="linkLogin">Já tenho conta</a>
+                </div>
+            </section>
+        </form>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>  <!-- script do alerta personalizado -->
+    <script src="script.js"></script>
+</body>
+
+</html>

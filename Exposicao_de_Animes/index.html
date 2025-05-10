@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Style.css">
+  <title>Artefairy - Eventos de Anime</title>
+</head>
+<body>
+  <section>
+    <header id="main-header">
+      <button id="menu-button" class="mobile-menu-button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <div class="header-content">
+        <h1 class="logo">Artefairy</h1>
+        <div class="search-container">
+          <input type="text" placeholder="Buscar eventos..." class="search-input"/>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="tickets-button">Ingressos</button>
+        <button class="cart-button">
+          <svg xmlns="http://www.w3.org/2000/svg" class="cart-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"></svg>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+  </section>
+
+  <section>
+    <div class="desktop-menu-container">
+      <nav class="desktop-menu">
+        <ul class="desktop-menu-list">
+          <li><a href="#inicio" class="desktop-menu-link">Início</a></li>
+          <li><a href="#eventos" class="desktop-menu-link">Eventos</a></li>
+          <li><a href="#convidados" class="desktop-menu-link">Convidados</a></li>
+          <li><a href="#galeria" class="desktop-menu-link">Galeria</a></li>
+          <li><a href="#ingressos" class="desktop-menu-link">Ingressos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <main>
+    <section class="hero-banner">
+      <div class="hero-content">
+        <h2 class="hero-title">AnimeCon 2023</h2>
+        <p class="hero-subtitle">O maior evento de anime do país</p>
+      </div>
+      <div class="hero-date">
+        15-18 DE OUTUBRO
+      </div>
+    </section>
+
+    <section class="events-section">
+      <div class="container">
+        <h1 class="section-title">Eventos Imperdíveis</h1>
+        <div class="events-grid" id="eventos-container"></div>
+      </div>
+
+      <div class="container guests-container" id="convidados">
+        <h1 class="section-title">Convidados Especiais</h1>
+        <div class="guests-grid" id="convidados-container"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 Artefairy. Todos os direitos reservados.</p>
+      <div class="social-media">
+        <a href="#" class="social-icon"><img src="https://example.com/facebook-icon.png" alt="Facebook"></a>
+        <a href="#" class="social-icon"><img src="https://example.com/twitter-icon.png" alt="Twitter"></a>
+        <a href="#" class="social-icon"><img src="https://example.com/instagram-icon.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('show');
+      });
+
+      document.querySelectorAll('#mobile-menu a').forEach(item => {
+        item.addEventListener('click', () => {
+          mobileMenu.classList.remove('show');
+        });
+      });
+    });
+
+    const eventos = [
+      {
+        id: 1,
+        nome: "Campeonato de Cosplay",
+        descricao: "Mostre seu talento no maior campeonato de cosplay do país! Premiação para os melhores.",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5gY81zPJ0Zf2-NGHYk1EP1_zLxJt0SlgfeA&s",
+        data: "15/10 - 14:00h",
+        local: "Palco Principal",
+        categoria: "Competição",
+        corDestaque: "purple"
+      },
+      {
+        id: 2,
+        nome: "Painel com Dubladores",
+        descricao: "Encontro exclusivo com os dubladores dos seus animes favoritos. Pergunte e tire fotos!",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1aDjy1IMDwPP6RulOesNw_A7I3u7VSZhwGA&s",
+        data: "16/10 - 16:00h",
+        local: "Sala VIP",
+        categoria: "Palestra",
+        corDestaque: "blue"
+      },
+      {
+        id: 3,
+        nome: "Exposição de Arte",
+        descricao: "Obras originais de artistas nacionais e internacionais. Algumas disponíveis para venda.",
+        imagem: "https://s2-g1.glbimg.com/hOvFjpoN28tsgNM0OeRBMdqkeyk=/0x0:800x450/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/0/S/OPM1aCSain78oNpzfCkw/6.jpg",
+        data: "15-18/10 - 10:00h",
+        local: "Galeria Central",
+        categoria: "Exposição",
+        corDestaque: "red"
+      },
+      {
+        id: 4,
+        nome: "Torneio de Games",
+        descricao: "Competição de jogos de anime e fighting games. Premiação em dinheiro para os vencedores!",
+        imagem: "https://avaliagora.com.br/wp-content/uploads/img/Eventos-Gamers.jpg",
+        data: "17/10 - 12:00h",
+        local: "Área de Games",
+        categoria: "Competição",
+        corDestaque: "green"
+      },
+      {
+        id: 5,
+        nome: "Workshop de Desenho",
+        descricao: "Aprenda técnicas de desenho mangá com artistas profissionais. Materiais inclusos.",
+        imagem: "https://img-c.udemycdn.com/course/750x422/3845472_02c2_4.jpg",
+        data: "18/10 - 11:00h",
+        local: "Sala de Workshops",
+        categoria: "Oficina",
+        corDestaque: "yellow"
+      },
+      {
+        id: 6,
+        nome: "Stand de Mangá e Action Figures",
+        descricao: "Um espaço de venda que oferece uma variedade de mangás, HQ's, e figures actions!",
+        imagem: "https://cdn.ome.lt/aacRnGwYXIIGnk_YLv84ZlBbuiI=/1200x630/smart/extras/conteudos/bienal.jpg",
+        data: "17/10 - 19:00h",
+        local: "Palco Secundário",
+        categoria: "Entretenimento",
+        corDestaque: "orange"
+      }
+    ];
+
+    const convidados = [
+      {
+        id: 1,
+        nome: "Yui Ishikawa",
+        descricao: "Dubladora japonesa (voz de Mikasa em Attack on Titan)",
+        imagem: "https://www.animeunited.com.br/oomtumtu/2020/05/jwyi-e1588695088224.jpg",
+        anime: "Attack on Titan",
+        corDestaque: "red"
+      },
+      {
+        id: 2,
+        nome: "Hiroshi Kamiya",
+        descricao: "Dublador japonês (voz de Levi em Attack on Titan)",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROfCt-REkkobiKEBM3NIDZiux4_H8o6gMEtUC_HzJibhKPSDea",
+        anime: "Attack on Titan",
+        corDestaque: "blue"
+      },
+      {
+        id: 3,
+        nome: "Yūki Kaji",
+        descricao: "Dublador japones (voz de Eren em Attack on Titan)",
+        imagem: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQCs_BGc-bX4yfRWBo6ZiFvujdou4qiFS31mQTbZrLBjXroT_9dW8imjA0TaqdEDm2N6B6ysp-dfOjwyygKUp-EQg",
+        anime: "Attack on Titan",
+        corDestaque: "yellow"
+      },
+      {
+        id: 4,
+        nome: "Marina Inoue",
+        descricao: "Dubladora japonesa (voz de Armin em Attack on Titan)",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJRDh4QR3BSCrk4odxHBtvFJOsxOw2NBXpJw&s",
+        anime: "Attack on Titan",
+        corDestaque: "orange"
+      }
+    ];
+
+    const cores = {
+      green: { border: 'green-border', text: 'green-text', bg: 'green-bg', hover: 'green-hover' },
+      blue: { border: 'blue-border', text: 'blue-text', bg: 'blue-bg', hover: 'blue-hover' },
+      red: { border: 'red-border', text: 'red-text', bg: 'red-bg', hover: 'red-hover' },
+      yellow: { border: 'yellow-border', text: 'yellow-text', bg: 'yellow-bg', hover: 'yellow-hover' },
+      purple: { border: 'purple-border', text: 'purple-text', bg: 'purple-bg', hover: 'purple-hover' },
+      orange: { border: 'orange-border', text: 'orange-text', bg: 'orange-bg', hover: 'orange-hover' },
+      gray: { border: 'gray-border', text: 'gray-text', bg: 'gray-bg', hover: 'gray-hover' },
+      black: { border: 'black-border', text: 'black-text', bg: 'black-bg', hover: 'black-hover' }
+    };
+
+    function renderizarEventos() {
+      const container = document.getElementById('eventos-container');
+      
+      eventos.forEach(evento => {
+        const cor = cores[evento.corDestaque] || cores.purple;
+        const card = `
+          <div class="event-card ${cor.border}">
+            <img src="${evento.imagem}" alt="${evento.nome}" class="event-image"/>
+            <h2 class="event-title ${cor.text}">${evento.nome}</h2>
+            <p class="event-description">${evento.descricao}</p>
+            <div class="event-info">
+              <p class="event-date"><svg xmlns="http://www.w3.org/2000/svg" class="info-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg> ${evento.data}</p>
+              <p class="event-location"><svg xmlns="http://www.w3.org/2000/svg" class="info-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg> ${evento.local}</p>
+            </div>
+            <button class="event-button ${cor.bg} ${cor.hover}">
+              Mais Informações
+            </button>
+          </div>
+        `;
+        container.innerHTML += card;
+      });
+    }
+
+    function renderizarConvidados() {
+      const container = document.getElementById('convidados-container');
+      
+      convidados.forEach(convidado => {
+        const cor = cores[convidado.corDestaque] || cores.purple;
+        const card = `
+          <div class="guest-card">
+            <div class="guest-image-container ${cor.border}">
+              <img src="${convidado.imagem}" alt="${convidado.nome}" class="guest-image"/>
+            </div>
+            <h3 class="guest-name ${cor.text}">${convidado.nome}</h3>
+            <p class="guest-description">${convidado.descricao}</p>
+            <p class="guest-anime">${convidado.anime}</p>
+          </div>
+        `;
+        container.innerHTML += card;
+      });
+    }
+
+    function carregarConteudo() {
+      try {
+        renderizarEventos();
+        renderizarConvidados();
+      } catch (err) {
+        console.error('Erro ao carregar conteúdo:', err);
+        document.getElementById('eventos-container').innerHTML = `
+          <div class="error-message">
+            Erro ao carregar os eventos. Recarregue a página.
+          </div>`;
+      }
+    }
+    
+    window.addEventListener('DOMContentLoaded', carregarConteudo);
+  </script>
+</body>
+</html>

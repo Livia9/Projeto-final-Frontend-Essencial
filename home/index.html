@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home da loja de artefatos magicos Artefairy" />
+    <link rel="shortcut icon" href="./assets/artefairy.png" type="image/x-icon" alt="icone da logo da artefairy" /> 
+    <title>Artefairy</title>
+    <!-- CSS e script -->
+    <link rel="stylesheet" href="./stylehome.css">
+     <script src="ButtonCard.js" defer> </script>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    </head>
+    <!-- corpo do site -->
+<body>
+  <!-- CABEÇALHO BOOTSTRAP-->
+  <header class="p-3 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none" >
+        <img src="./assets/artefairy.png" width="110" height="110" alt="Logo do e-commerce Artefairy">
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="./index.html" class="nav-link px-2 link-secondary">Inicio</a></li>
+          <li><a href="../Catalogo/index.html" class="nav-link px-2 text-white">Catálogo</a></li>
+          <li><a href="../Exposicao_de_Animes/index.html" class="nav-link px-2 text-white">Exposição</a></li>
+       </ul>
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control" placeholder="Pesquisar..." aria-label="Search"/>
+        </form>
+
+        <div class="text-end">
+         <a href="../login/cadastro/cadastro/index.html" class="btn btn-warning">Cadastre-se</a>
+          <a href="../login/cadastro/login/index.html" class="btn btn-outline-light me-2">Entrar</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+<main>
+  <section id="bemvindo">
+    <h1>Bem-vindo à Artefairy!</h1>
+    <p>Artefatos mágicos, feitiços únicos e mais te esperam.</p>
+</section>
+     <h2 id="destaque"> Artefatos em destaque</h2>
+<div class="produtosdestaque">
+  <!-- Produto 1 -->
+  <div class="produto">
+    <img src="./assets/Golden_Apple_JE2_BE2.webp" alt="Maçã Dourada do Minecraft">
+    <h4>Maçã Dourada Encantada</h4>
+    <p class="descricao">A lendária maçã dourada do Minecraft que concede regeneração e resistência.</p>
+    <p class="preco">R$ 5.030,00</p>
+   <button class="buttonCart" data-id="1"> <i class="bi bi-cart-plus"></i> </button> </div>
+  
+  <!-- Produto 2 -->
+  <div class="produto">
+    <img src="./assets/pokebola.png" alt="Pokebola">
+    <h4>Pokebola do Ash</h4>
+    <p class="descricao">Usadas para capturar Pokémon selvagens e armazenar seus próprios Pokémon</p>
+    <p class="preco">R$ 8.500,00</p>
+   <button class="buttonCart" data-id="2"> <i class="bi bi-cart-plus"></i> </button>
+  </div>
+  
+  <!-- Produto 3-->
+  <div class="produto">
+    <img src="./assets/varinha.webp" alt="Varinha das varinhas de Harry Potter">
+    <h4>Varinha do Harry Potter</h4>
+    <p class="descricao">Feita de teixo e pena de fênix, a varinha mais poderosa do mundo bruxo!</p>
+    <p class="preco">R$ 10.139,00</p>
+    <button class="buttonCart" data-id="3"> <i class="bi bi-cart-plus"></i> </button>
+  </div>
+</div>
+
+
+<a href="../Catalogo/index.html" id="vermais" class="botao-link">Ver mais</a>
+
+<!-- Seção de Benefícios -->
+<section class="beneficios">
+  <div class="beneficioscontainer">
+    <!-- Benefício 1 -->
+    <div class="beneficioitem">
+      <h3>Autenticidade Garantida</h3>
+      <p>Todos nossos artefatos são verificados previamente para sua total satisfação.</p>
+    </div>
+    
+    <!-- Benefício 2 -->
+    <div class="beneficioitem">
+      <h3>Entrega Rápida</h3>
+      <p>Utilizamos portais dimensionais para entregas em até 12h para todo o universo</p>
+    </div>
+    
+    <!-- Benefício 3 -->
+    <div class="beneficioitem">
+      <h3>Pagamento Seguro</h3>
+      <p>Aceitamos todas as moedas existentes.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Rodapé -->
+<footer>
+  <div class="rodape">
+    <p>Contato:</p>
+    <p><a href="mailto:contato@artefairy.com" class="linkcontato" target="_blank">contato@artefairy.com</a></p> 
+    <p><a href="https://wa.me/+5511999999999?text=Ol%C3%A1%2C%20tudo%20bem%3F" class="linkcontato" target="_blank">+55 (11) 999999999 </a></p>
+    <p><a href="https://instagram.com/artefairyofc" class="linkcontato" target="_blank">Instagram</a></p>
+<hr>
+    <p id="creditos">&copy; 2025 Artefairy - Todos os direitos reservados</p>
+  </div>
+</footer>
+<script src="./script.js" defer></script>
+<script src="../carrinho_de_compras/PageCart/script.js" defer></script> 
+</body>
+</html>

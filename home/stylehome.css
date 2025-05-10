@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+/* ESTILO DO SITE  */
+/* BOOTSTRAP */
+.form-control-dark {
+    border-color: var(--bs-gray);
+}
+
+.form-control-dark:focus {
+    border-color: #fff;
+    box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+
+.text-small {
+    font-size: 85%;
+}
+
+.dropdown-toggle:not(:focus) {
+    outline: 0;
+}
+
+/* estilo produtos em destaque na loja */
+.produtosdestaque {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.produto {
+    width: 22%;
+    min-width: 200px;
+    margin: 5px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+.produto img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.produto h4 {
+    color: #333;
+    margin: 5px 0;
+}
+
+.descricao {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.preco {
+    color: #e67e22;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* estilo caixa bem vindo */
+#bemvindo {
+    text-align: center;
+    font-weight: lighter;
+    background: url('assets/fundo.jpg') center/cover no-repeat;
+    color: white;
+    padding: 100px 20px;
+    border-radius: 10px;
+    margin: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    /*sombra  */
+    box-shadow: 0 0 30px #FFD700;
+}
+
+#bemvindo h1 {
+    text-shadow: 1px 1px 3px #f3d840;
+}
+
+#destaque {
+    color: #FFD700;
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(#4d3c5e 0%, #1f0f2e 100%);
+}
+
+#vermais {
+    --primeira-cor: #461970;
+    background-color: var(--primeira-cor);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 1.2rem;
+}
+
+#vermais:hover {
+    background-color: hsl(268, 60%, 55%);
+}
+
+/* Seção de Benefícios */
+.beneficios {
+    color: rgb(0, 0, 0);
+    padding: 60px 20px;
+}
+
+.beneficioscontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.beneficioitem {
+    width: 30%;
+    min-width: 280px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.beneficioitem:hover {
+    transform: translateY(-10px);
+}
+
+.beneficioitem h3 {
+    color: #FFD700;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.beneficioitem p {
+    line-height: 1.6;
+
+}
+
+/* Footer Estilizado */
+footer {
+    background: #1f0f2e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'MedievalSharp', cursive;
+}
+
+/* Links de contato */
+.linkcontato {
+    color: #e0a72b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.linkcontato:hover {
+    color: #f8d56b;
+    text-decoration: underline;
+}
+
+#creditos {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+html,
+body,
+a,
+a:hover,
+input,
+input:hover,
+button,
+label {
+    cursor: url(http://media.tumblr.com/tumblr_lw61mazJ5K1qgnbhu.png), auto;
+}
+
+body {
+    font-family: 'MedievalSharp', cursive;
+    background: linear-gradient(to right, #bda6c0, #7846cf);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* botoes de carrinho */
+.buttonCart {
+    background-color: #3c096c;
+    /* Cor para o botão */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    /* Bordas mais arredondadas */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    font-size: 1.2em;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.buttonCart:hover {
+    background-color: #7b2cbf;
+    /* Cor mais clara ao passar o mouse */
+}
+
+/* Ícone do carrinho */
+.bi {
+    margin-right: 8px;
+}
+
+/* Estilo do alerta de sucesso */
+.alerta {
+    color: #7b2cbf;
+    /* Cor de alerta em tom mais claro de roxo */
+    font-weight: bold;
+}
+
+/* Fonte para todo o site */
+* {
+    font-family: 'MedievalSharp', cursive !important;
+}

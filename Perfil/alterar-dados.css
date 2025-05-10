@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+/* Estilo Padrão */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,body,a,a:hover,input,input:hover,button,label {
+  cursor: url(http://media.tumblr.com/tumblr_lw61mazJ5K1qgnbhu.png), auto;
+}
+
+body {
+  font-family: 'MedievalSharp', cursive;
+  background: linear-gradient(to right, #bda6c0, #7846cf);
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: #3b2f2f;
+  padding: 20px;
+  margin: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #fffaf3;
+  border: 3px solid #915aa0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #5a3e2b;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+/* Formulário */
+form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Botão */
+button {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #915aa0;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #915aa0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  form {
+    padding: 15px;
+  }
+}
