@@ -1,4 +1,5 @@
 # <img src="artefairy.png" width="40"> ArteFairy
+primeira versao read me
 
 ✨ **E-commerce de itens mágicos** de universos geek (Harry Potter, Minecraft, Pokémon etc.)
 
@@ -11,11 +12,6 @@
 - Catálogo com +50 itens fictícios
 - Carrinho persistente
 - Design temático (roxo/dourado + fontes medievais)
-
-## 🚀 Como usar
-1. Abra `index.html`
-2. Explore produtos mágicos!
-3. Itens ficam salvos no carrinho automaticamente
 
 🔮 *"Onde a fantasia vira realidade!"*  
 
