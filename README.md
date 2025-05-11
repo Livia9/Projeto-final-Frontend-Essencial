@@ -1,4 +1,4 @@
-# <img src="logo.png" width="30"> ArteFairy
+# <img src="artefairy.png" width="40"> ArteFairy
 
 ✨ **E-commerce de itens mágicos** de universos geek (Harry Potter, Minecraft, Pokémon etc.)
 
