@@ -84,7 +84,7 @@ Desenvolvido como trabalho final da disciplina de Front End Essencial, o projeto
 ## 🚀 Como Executar
 
 1. Clone o repositório
-2. Abra o arquivo index.html no navegador
+2. Abra o arquivo index.html da pasta "home" no navegador
 
 ## 📌 Considerações Finais
 
