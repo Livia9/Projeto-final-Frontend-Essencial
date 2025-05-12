@@ -79,3 +79,30 @@ Desenvolvido como trabalho final da disciplina de Front End Essencial, o projeto
 ├──> index.html **Arquivo base/root da aplicação**    
 ├──> script.js **Scripts auxiliares globais**   
 └──> style.css **Estilo base ou geral do projeto**  
+
+
+## 🚀 Como Executar
+
+1. Clone o repositório
+2. Abra o arquivo index.html no navegador
+
+## 📌 Considerações Finais
+
+O desenvolvimento do **ArteFairy** foi uma oportunidade valiosa para consolidar conhecimentos essenciais de front-end e colocar em prática boas práticas de desenvolvimento.  
+
+### 🎯 Principais Realizações  
+- **Fluxo de E-commerce Completo**: do catálogo à finalização do carrinho, com navegação fluida e usabilidade aprimorada.  
+- **Persistência de Dados**: uso inteligente de **LocalStorage** para manter o estado do carrinho entre sessões.  
+- **Arquitetura Modular**: cada funcionalidade isolada em pastas e arquivos específicos, facilitando a manutenção e escalabilidade.  
+- **Design Coerente**: sistema de identidade visual consistente, com paleta de cores temática e componentes reutilizáveis.  
+
+### 🔧 Desafios Superados  
+- **Sincronização de Estado** entre páginas distintas, garantindo que o carrinho reflita alterações em tempo real.  
+- **Validação de Formulários** no client-side, com feedback imediato ao usuário.  
+- **Otimização de Performance** para dispositivos móveis, reduzindo tempos de carregamento e melhorando a experiência em telas menores.  
+
+### 📚 Lições Aprendidas  
+- **Versionamento Colaborativo**: importância de fluxos de trabalho baseados em Git/GitHub para coordenação de equipe.  
+- **Documentação Clara**: comentários e READMEs detalhados agilizam a compreensão e integração de novos colaboradores.  
+- **Testes Multiplataforma**: verificar a consistência e responsividade em diferentes navegadores e dispositivos.
+- **Acessibilidade**: compreensão da importância de tornar os sites acessíveis para todos os usuários.  
