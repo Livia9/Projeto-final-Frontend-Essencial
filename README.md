@@ -1,4 +1,4 @@
-<p align="center"> <img src="artefairy.png" width="140" height="140" alt="E-commerce ArteFairy-logo"></p>
+<p align="center"> <img src="artefairy.png" width="100" height="100" alt="E-commerce ArteFairy-logo"></p>
 <h1 align="center">ArteFairy</h1>
 
 O **ArteFairy** é um e-commerce temático fictício que simula a venda de artefatos inspirados em diferentes universos da cultura pop, como filmes, séries e jogos.  
